@@ -1,0 +1,14 @@
+.busList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.noBuses{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 80vh;
+    width: 100vw;
+}

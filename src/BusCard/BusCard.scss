@@ -1,0 +1,122 @@
+.basicbutton {
+    border: none;
+    color: white;
+    height: 2.2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+.bookSeatButton{
+    @extend .basicbutton;
+    width: 8rem;
+    background: crimson;
+    font-size: 1rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.busCard{
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+}
+.busImage{
+    width: 15rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    display: block;
+}
+.fa-star{
+    color: gold !important;
+}
+
+.cardRight{
+    width: 15rem;
+    padding: 0.5rem 0 0 2rem;
+    line-height: 2rem;
+}
+.cardLeft{
+    width: 15rem;
+}
+.strike{
+    text-decoration: line-through;
+    color: red;
+    font-size: 1.3rem;
+}
+.bold{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.busPrice{
+    display: inline;
+}
+
+.busName{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.discountPrice{
+    font-size: 1.5rem;
+    color: green;
+}
+
+.busCard:hover{
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+.specialities i{
+    color: gray;
+    margin: 0.5rem 0.5rem 0 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+}
+
+.totalNumberOfReviews{
+    font-size: 0.8rem;
+}
+.fa-pen{
+    font-size: 0.6rem;
+}
+
+.specialities{
+    width: 10rem;
+    text-align: left;
+    display: inline-block;
+}
+.busRestStops{
+    width: 3rem;
+    text-align: right;
+}
+.busCard:hover i, .busCard:hover div{
+    color: white;
+}
+
+@keyframes scale{
+    from {transform: scale(1)};
+    to {transform: scale(1.05)};
+}
+.tags{
+    display: flex;
+    margin-top: 1rem;
+}
+.tags div{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: darkgrey;
+    font-weight: 700;
+    border-radius: 1rem;
+    padding: 0.1rem 0.5rem;
+    width: fit-content;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    font-size: smaller;
+    margin: 0.1rem;
+}
