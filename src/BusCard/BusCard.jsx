@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './BusCard.scss'
 function BusCard({bus}) {
     return (
@@ -27,7 +28,7 @@ function BusCard({bus}) {
                 <div className="busPrice">INR <span className={(bus.discountPrice > 0) ? "strike" : "bold"}>{bus.price}</span></div>
                 { (bus.discountPrice > 0 ? <strong className='discountPrice'> {bus.discountPrice}</strong> : "")}
                 <div className="busAvailableSeats">{bus.availableSeats} seats available</div>
-                <button className='bookSeatButton'>Book seats</button>
+                <Link to={"/busdetails/"+ bus.id}><button className='bookSeatButton'>Book seats</button></Link>
             </div>
             
         </div>

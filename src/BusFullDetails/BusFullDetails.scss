@@ -1,0 +1,170 @@
+.basicBedIcon{
+    width: 10rem;
+    height: 6rem;
+    padding: 0.3rem;
+    margin: 1rem;
+}
+
+.seatDetails{
+    @extend .basicBedIcon;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.seats{
+    display: flex;
+    max-width: 80rem;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+}
+.busFullDetails{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+}
+.booked{
+    background: yellow;
+    pointer-events: none;
+}
+.female{
+    background: pink;
+    pointer-events: none;
+}
+
+.seatDetails:hover, .genderButton:hover{
+    cursor: pointer;
+}
+
+.seatDetails:active{
+    background: palegreen;
+}
+
+.coupon{
+    text-transform: uppercase;
+    padding: 0.5rem;
+    width: 10rem;
+    outline: none;
+}
+.applyButton{
+    width: 5rem;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background: black;
+    color: white;
+    margin-left: 1rem;
+}
+.applyButton:hover{
+    background: greenyellow;
+    cursor: pointer;
+    color: black;
+}
+.genderButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.bookedSeat{
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+.maleButton{
+   width: 4.8rem;
+   height: 2rem;
+   padding: 0.5rem;
+   margin-bottom: 0.2rem;
+   text-align: left;
+   background: white;
+   border: 0.1rem solid black;
+   margin-right: 0.3rem;
+   border-radius: 0.2rem;
+}
+.femaleButton{
+   width: 4.8rem;
+   height: 2rem;
+   padding: 0.5rem;
+   margin-bottom: 0.2rem;
+   text-align: left;
+   background: white;
+   border: 0.1rem solid black;
+   border-radius: 0.2rem;
+}
+
+.femaleButton:hover{
+    cursor: pointer;
+    animation-name: pinkdoor;
+    animation-duration: 1000ms;
+ }
+.maleButton:hover{
+    cursor: pointer;
+    animation-name: yellowdoor;
+    animation-duration: 1000ms;
+ }
+
+ @keyframes pinkdoor{
+     from {box-shadow: 0}
+     to {box-shadow: inset -10.5em 0 0 0 pink, inset 10.5em 0 0 0 pink;}
+ }
+
+ @keyframes yellowdoor{
+    from {box-shadow: 0}
+    to {box-shadow: inset -10.5em 0 0 0 yellow, inset 10.5em 0 0 0 yellow;}
+}
+
+.bookingSeatsInfo{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.colorInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 7rem;
+    position: relative;
+    left: 75rem;
+}
+
+.tile{
+    width: 1rem;
+    height: 1rem;
+    border: 0.1rem solid black;
+    margin-right: 0.3rem;
+}
+
+.whiteTile, .yellowTile, .pinkTile{
+    display: flex;
+    margin: 0.5rem;
+}
+
+.reviewPageButton{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 21rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.2rem;
+    background: red;
+}
+.disabledReviewPageButton{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 21rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.2rem;
+}
+
+.reviewPageButton:hover{
+    box-shadow: 0 0 5px red, 0 0 25px red,0 0 50px red,0 0 200px red,;
+    cursor: pointer;
+}

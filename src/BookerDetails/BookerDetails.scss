@@ -1,0 +1,61 @@
+.bookerDetails{
+    margin: auto;
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,45,45,1) 100%);
+}
+.userInputs{
+    width: 40rem;
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.userInputs i{
+    font-size: 20rem;
+    margin: 5rem 0;
+}
+.bookerName{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 20rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.2rem;
+}
+
+.bookingPageButton{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 21rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.2rem;
+}
+.disabledBookingPageButton{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 21rem;
+    margin: 0.2rem;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.2rem;
+}
+
+.bookingPageButton:hover{
+    background: #ff96ad;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad,0 0 50px #ff96ad,0 0 200px #ff96ad,;
+    cursor: pointer;
+}
+
+.companyName{
+    font-size: 5rem;
+}
