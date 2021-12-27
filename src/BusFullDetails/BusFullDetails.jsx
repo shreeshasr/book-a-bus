@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { bookASeat } from '../Redux/BusSlice';
+import { bookASeat, removeBookedSeat } from '../Redux/BusSlice';
 import "./BusFullDetails.scss"
 function BusFullDetails() {
     const buses = useSelector( (state) => state.busReducer.busesToDisplay)
@@ -45,13 +45,18 @@ function BusFullDetails() {
         let seats = [];
         let seatsBooked = getBookedSeats()
         let femaleSeatsBooked = getFemaleSeats()
-        console.log(seatsBooked)
+        let ticketsOfBooker = getTicketsOfABooker(bookerName)
+        let decideButtonText;
         for(let i=0; i<busDeatils.totalSeats; i++){
+           decideButtonText = ticketsOfBooker.includes(i+1) ?  "cancelBooking" : "notAvailable";
             seats.push(
             <div className={"seatDetails " + (seatsBooked.includes(i+1) ? "booked ": " ") + (femaleSeatsBooked.includes(i+1) ? "female ": "")} >
                 <i class="fas fa-bed"></i><div className="seatNumber">{i+1}</div>
                 {
-                seatsBooked.includes(i+1) ? <div className='bookedSeat'>Booked</div> :
+                seatsBooked.includes(i+1) ? 
+                <button className={'bookedSeat ' + decideButtonText} onClick={ () => dispatch(removeBookedSeat({id: id, seatNumber: i+1, bookerName:bookerName}))}>
+                    { ticketsOfBooker.includes(i+1) ?  "Cancel booking" : "Not available"}
+                </button> :
                 <div className="genderButtons">
                     <button className='maleButton' onClick={ () => dispatch(bookASeat({id:parseInt(id), seatNumber: i+1, gender: "M", booker: bookerName}))}>Male <i class="fas fa-male"></i></button>
                     <button className='femaleButton' onClick={ () => dispatch(bookASeat({id:parseInt(id), seatNumber: i+1, gender: "F", booker: bookerName}))}>Female <i class="fas fa-female"></i></button>

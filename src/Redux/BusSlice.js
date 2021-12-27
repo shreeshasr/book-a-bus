@@ -238,11 +238,17 @@ const busSlice = createSlice({
         bookASeat: (state, action) => {
             for(let i=0;i<state.busesToDisplay.length;i++){
                 if(state.busesToDisplay[i].id === action.payload.id){
-                    if(state.busesToDisplay[i].bookedSeats.filter( (seat) => seat.seatNumber === action.payload.seatNumber).length > 0){
-                        console.log("im gere")
-                    }
                     state.busesToDisplay[i].bookedSeats.push({seatNumber: action.payload.seatNumber, gender: action.payload.gender, booker: action.payload.booker})
                     state.busesToDisplay[i].availableSeats = state.busesToDisplay[i].availableSeats - 1
+                }
+            }
+        },
+        removeBookedSeat: (state, action) => {
+            console.log("triggred")
+            for(let i=0;i<state.busesToDisplay.length;i++){
+                if(state.busesToDisplay[i].id === parseInt(action.payload.id)){
+                    state.busesToDisplay[i].bookedSeats = state.busesToDisplay[i].bookedSeats.filter( (seat) => (seat.seatNumber !== action.payload.seatNumber && seat.bookerName !== action.payload.bookerName))
+                    state.busesToDisplay[i].availableSeats = state.busesToDisplay[i].availableSeats + 1
                 }
             }
         }
@@ -250,6 +256,6 @@ const busSlice = createSlice({
     }
 })
 
-export const {filterBuses, getAllBusesAvailableOverall, setJourneyDate, getBusDetailsFromId, bookASeat, setTicketBookerName} = busSlice.actions;
+export const {filterBuses, getAllBusesAvailableOverall, setJourneyDate, getBusDetailsFromId, bookASeat, setTicketBookerName, removeBookedSeat} = busSlice.actions;
 
 export default busSlice.reducer
