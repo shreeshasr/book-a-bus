@@ -28,3 +28,29 @@
     margin: auto;
     line-height: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+    .summary{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 18rem;
+        padding: 1rem;
+        margin: 1rem auto;
+        text-align: left;
+        height: 25rem;
+        background: white;
+    }
+    .yourTicketInfo{
+        text-align: left;
+        width: 18rem;
+        height: 25rem;
+        margin: auto;
+        line-height: 2rem;
+    }
+    .bookingSummary{
+        padding: 0.5rem;
+        background: slategrey;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

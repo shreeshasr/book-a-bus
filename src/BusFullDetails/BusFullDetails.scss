@@ -15,16 +15,16 @@
 }
 .seats{
     display: flex;
-    max-width: 80rem;
     flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     margin: auto;
 }
 .busFullDetails{
     position: absolute;
-    width: 100%;
     text-align: center;
     margin: 2rem;
+    max-width: 100vw;
 }
 .booked{
     background: yellow;
@@ -133,10 +133,12 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     height: 7rem;
     position: relative;
-    left: 75rem;
+    left: 68rem;
+    margin: 2rem 0;
+    width: 20rem;
 }
 
 .tile{
@@ -176,4 +178,86 @@
 .reviewPageButton:hover{
     box-shadow: 0 0 5px red, 0 0 25px red,0 0 50px red,0 0 200px red,;
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .seatDetails{
+        width: 8rem;
+        height: 6rem;
+        padding: 0.3rem;
+        margin: 0.5rem;
+        border-radius: 0.3rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .colorInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 7rem;
+        position: relative;
+        left: 5rem;
+        margin: 2rem 0;
+        width: 20rem;
+    }
+
+    .maleButton{
+        width: 3.8rem;
+        height: 2rem;
+        padding: 0.3rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        background: white;
+        border: 0.1rem solid black;
+        margin-right: 0.3rem;
+        border-radius: 0.2rem;
+     }
+     .femaleButton{
+        width: 3.8rem;
+        height: 2rem;
+        padding: 0.3rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        background: white;
+        border: 0.1rem solid black;
+        border-radius: 0.2rem;
+     }
+     
+     .bookingSeatsInfo{
+         font-size: 1rem;
+         margin-bottom: 3rem;
+     }
+     .colorInfo{
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         justify-content: center;
+         font-size: 0.8rem;
+         height: 7rem;
+         width: 18rem;
+     }
+     
+     .tile{
+         width: 1rem;
+         height: 1rem;
+         border: 0.1rem solid black;
+         margin-right: 0.3rem;
+     }
+     
+     .whiteTile, .yellowTile, .pinkTile{
+         display: flex;
+         margin: 0.5rem;
+     }
+
+     .reviewPageButton{
+        width: 18rem;
+    }
+    .disabledReviewPageButton{
+        width: 18rem;
+    }
 }

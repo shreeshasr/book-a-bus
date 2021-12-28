@@ -61,6 +61,7 @@
 .busName{
     font-weight: 700;
     font-size: 1.3rem;
+    padding-bottom: 1rem;
 }
 
 .discountPrice{
@@ -121,4 +122,83 @@
     line-height: 1rem;
     font-size: smaller;
     margin: 0.1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .busCard{
+        width: 23rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 0.1rem;
+        border-radius: 0.3rem;
+        box-sizing: border-box;
+    }
+
+    .busImage{
+        width: 10rem;
+        height: 7rem;
+        border-radius: 0.5rem;
+        display: block;
+    }
+
+    .cardRight{
+        width: 10rem;
+        padding: 0.4rem 0 0 1rem;
+        line-height: 1.8rem;
+    }
+    .cardLeft{
+        width: 10rem;
+        padding: 0.4rem 0 0 1rem;
+    }
+
+    .specialities{
+        width: 7rem;
+        text-align: left;
+        display: inline-block;
+        font-size: xx-small;
+    }
+
+    .specialities i{
+        color: gray;
+        margin: 0.1rem;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+    }
+
+    .tags{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-top: 1rem;
+    }
+    .tags div{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background: darkgrey;
+        font-weight: 700;
+        font-size: xx-small;
+        border-radius: 1rem;
+        padding: 0 0.5rem;
+        
+        height: 1rem;
+        text-align: left;
+        line-height: 1rem;
+        margin: 0.2rem;
+    }
+
+    .busRestStops{
+        width: 1rem;
+        font-size: xx-small;
+        text-align: right;
+    }
+    .bookSeatButton{
+        width: 5rem;
+        background: crimson;
+        font-size: 0.8rem;
+        border-radius: 1rem;
+        margin: 1rem 0;
+    }
 }

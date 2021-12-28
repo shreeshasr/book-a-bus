@@ -56,11 +56,11 @@ $margin: 1rem;
     border: none;
     outline: none;
 }
-  .dropdown-content {
+  .from-dropdown-content, .to-dropdown-content {
     display:block;
     position: absolute;
-    top: 10rem;
-    width: 25rem;
+    top: 12.5rem;
+    width: 20rem;
     background-color: #f1f1f1;
     min-width: 160px;
     max-height: 250px;
@@ -70,23 +70,23 @@ $margin: 1rem;
   }
   
   /* Links inside the dropdown */
-  .dropdown-content li {
+  .from-dropdown-content li,  .to-dropdown-content li {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
 
-  .dropdown-content ul {
+  .from-dropdown-content ul,  .to-dropdown-content ul {
     padding: 0;
   }
 
-  .dropdown-content::-webkit-scrollbar {
+  .from-dropdown-content::-webkit-scrollbar, .to-dropdown-content::-webkit-scrollbar {
     display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.dropdown-content {
+.from-dropdown-content, .to-dropdown-content {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -109,4 +109,78 @@ $margin: 1rem;
   .disabled {
     pointer-events:none; //This makes it not clickable
     opacity:0.6;         //This grays it out to look disabled
+}
+
+@media screen and (max-width: 600px) {
+  .search{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  .searchBox{
+    width:15rem;
+    border: $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+  }
+  .searchBox i{
+    width: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    color: red;
+    position: relative;
+    display: inline-block;
+    
+}
+  .searchbutton{
+    width: 6rem;
+    background: crimson;
+    font-size: 0.7rem;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .searchButtons{
+    display: flex;
+  }
+
+  .from-dropdown-content {
+    display:block;
+    position: absolute;
+    top: 10rem;
+    width: 15rem;
+    background-color: #f1f1f1;
+    max-height: 9rem;
+    overflow: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .to-dropdown-content {
+    display:block;
+    position: absolute;
+    top: 14.5rem;
+    z-index: 9999;
+    width: 15rem;
+    background-color: #f1f1f1;
+    max-height: 9rem;
+    overflow: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
 }

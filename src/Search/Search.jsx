@@ -52,7 +52,7 @@ function Search() {
                 <input type="text" className='searchInput' placeholder='FROM' value={selectedFromPlace} onChange={ (e) => { setSelectedFromPlace(e.target.value) }} onClick={ () => { setShowFromDropdown(true) }}></input>
                 {
                     showFromDropdown ? (
-                        <div id="myDropdown" className="dropdown-content">
+                        <div id="myDropdown" className="from-dropdown-content">
                             <ul>
                                 {
                                 options.map((option) => (
@@ -67,7 +67,7 @@ function Search() {
                 <input type="text" className='searchInput' placeholder='TO' value={selectedToPlace} onChange={ (e) => { setSelectedToPlace(e.target.value) }} onClick={ () => { setShowToDropdown(true); }}></input>
                 {
                     showToDropdown ? (
-                        <div id="myDropdown" className="dropdown-content">
+                        <div id="myDropdown" className="to-dropdown-content">
                             <ul>
                                 {
                                 options.map((option) => (
@@ -81,8 +81,11 @@ function Search() {
                 <i className="fa fa-calendar"></i>
                 <DatePicker placeholderText="ONWARD DATE" minDate={new Date()} selected={journeyDate} onChange={date => dispatch(setJourneyDate({journeyDate : date}))}/>
             </div>
-            <button className='searchbutton' onClick={() => dispatch(filterBuses({from:selectedFromPlace, to:selectedToPlace}))}>Find buses</button>
-            <button className='searchbutton' onClick={() => { dispatch(getAllBusesAvailableOverall()); setSelectedFromPlace(''); setSelectedToPlace(); dispatch(setJourneyDate({journeyDate: new Date()}))}}>Clear All Filter</button>
+            <div className="searchButtons">
+              <button className='searchbutton' onClick={() => dispatch(filterBuses({from:selectedFromPlace, to:selectedToPlace}))}>Find buses</button>
+              <button className='searchbutton' onClick={() => { dispatch(getAllBusesAvailableOverall()); setSelectedFromPlace(''); setSelectedToPlace(); dispatch(setJourneyDate({journeyDate: new Date()}))}}>Clear all Filter</button>
+            </div>
+            
         </div>
     )
 }

@@ -5,7 +5,7 @@ import './BusList.scss'
 function BusList() {
     const buses = useSelector( (state) => state.busReducer.busesToDisplay)
     const searchFailed = useSelector( (state) => state.busReducer.searchFailed)
-    console.log(searchFailed)
+    
     return (
         <div className='busList'>
             {

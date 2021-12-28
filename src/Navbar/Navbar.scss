@@ -9,3 +9,9 @@ $margin: 2rem;
 .navbar{
     margin: $margin;
 }
+
+@media screen and (max-width: 600px) {
+    .navbar{
+        text-align: center;
+    }
+}
