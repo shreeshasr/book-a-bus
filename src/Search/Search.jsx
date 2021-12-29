@@ -81,7 +81,7 @@ function Search() {
             </div>
             <div className="searchButtons">
               <button className='searchbutton' onClick={() => dispatch(filterBuses({from:selectedFromPlace, to:selectedToPlace}))}>Find buses</button>
-              <button className='searchbutton' onClick={() => { dispatch(getAllBusesAvailableOverall()); setSelectedFromPlace(''); setSelectedToPlace(); dispatch(setJourneyDate({journeyDate: new Date()}))}}>Clear all Filter</button>
+              <button className='searchbutton' onClick={() => { dispatch(getAllBusesAvailableOverall()); setSelectedFromPlace(''); setSelectedToPlace(''); dispatch(setJourneyDate({journeyDate: new Date()}))}}>Clear all Filter</button>
             </div>
             
         </div>
