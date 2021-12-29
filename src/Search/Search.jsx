@@ -7,8 +7,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function Search() {
     const journeyDate = useSelector( (state) => state.busReducer.journeyDate)
-    console.log("fetcged ")
-    console.log(journeyDate)
     const [showFromDropdown, setShowFromDropdown] = useState(false)
     const [selectedFromPlace, setSelectedFromPlace] = useState()
     const [showToDropdown, setShowToDropdown] = useState(false)

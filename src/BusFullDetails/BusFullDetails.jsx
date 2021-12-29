@@ -40,7 +40,7 @@ function BusFullDetails() {
     }
 
     let busDeatils = getBusDetailsFromId(id)
-
+    
     const printNumberOfSeats = () => {
         let seats = [];
         let seatsBooked = getBookedSeats()

@@ -11,7 +11,7 @@ function BookerDetails() {
         <div className='bookerDetails'>
                 <div className="userInputs">
                     <div className="companyName">Book a bus</div>
-                    <i class="fas fa-bus"></i>
+                    <i className="fas fa-bus"></i>
                     <input type="text" className="bookerName" placeholder='Enter ticket booker name' onChange={ (e) => dispatch(setTicketBookerName({bookerName : e.target.value})) }/>
                     
                     {
