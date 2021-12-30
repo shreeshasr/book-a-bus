@@ -65,7 +65,7 @@ const initialState = {
             restStops: 3,
             discountPrice: 690,
             totalSeats: 40,
-            availableSeats: 0,
+            availableSeats: 30,
             coronaSaftey: true,
             ac: true,
             sleeper: false,

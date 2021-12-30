@@ -47,14 +47,14 @@ function Search() {
         <div className='search'>
             <div className="searchBox">
                 <i className="fa fa-building"></i>
-                <input type="text" className='searchInput' placeholder='FROM' value={selectedFromPlace} onChange={ (e) => { setSelectedFromPlace(e.target.value) }} onClick={ () => { setShowFromDropdown(true) }}></input>
+                <input type="text" className='searchInput' placeholder='FROM' value={selectedFromPlace} onChange={ (e) => { setSelectedFromPlace(e.target.value) }} onClick={ () => { setShowFromDropdown(true); setShowToDropdown(false) }}></input>
                 {
                     showFromDropdown ? (
                         <div id="myDropdown" className="from-dropdown-content">
                             <ul>
                                 {
                                 options.map((option) => (
-                                    <li onClick={ () => { setSelectedFromPlace(option.value); setShowFromDropdown(false) }} className={(option.value === selectedToPlace) ? "disabled" : ""}> {option.label}</li>))
+                                    <li onClick={ () => { setSelectedFromPlace(option.value); setShowFromDropdown(false)}} className={(option.value === selectedToPlace) ? "disabled" : ""}> {option.label}</li>))
                                 }   
                             </ul>
                         </div>) : ""
@@ -62,7 +62,7 @@ function Search() {
             </div>
             <div className="searchBox">
                 <i className="fa fa-building"></i>
-                <input type="text" className='searchInput' placeholder='TO' value={selectedToPlace} onChange={ (e) => { setSelectedToPlace(e.target.value) }} onClick={ () => { setShowToDropdown(true); }}></input>
+                <input type="text" className='searchInput' placeholder='TO' value={selectedToPlace} onChange={ (e) => { setSelectedToPlace(e.target.value) }} onClick={ () => { setShowToDropdown(true); setShowFromDropdown(false) }}></input>
                 {
                     showToDropdown ? (
                         <div id="myDropdown" className="to-dropdown-content">

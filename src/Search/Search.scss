@@ -113,36 +113,22 @@ $margin: 1rem;
 
 @media screen and (max-width: 600px) {
   .search{
-    display: flex;
     flex-direction: column;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
   }
   .searchBox{
     width:15rem;
-    border: $border;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.3rem;
   }
   .searchBox i{
     width: 2rem;
-    font-size: 1rem;
-    text-align: center;
-    color: red;
-    position: relative;
-    display: inline-block;
     
 }
   .searchbutton{
-    width: 6rem;
-    background: crimson;
-    font-size: 0.7rem;
+    width: 7rem;
+    font-size: 0.6rem;
     margin: 0.5rem;
-    border-radius: 0.3rem;
+    border-radius: 0.2rem;
     padding: 0.5rem;
   }
 
@@ -151,36 +137,21 @@ $margin: 1rem;
   }
 
   .from-dropdown-content {
-    display:block;
-    position: absolute;
     top: 10rem;
     width: 15rem;
-    background-color: #f1f1f1;
     max-height: 9rem;
-    overflow: scroll;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    
   }
 
   .to-dropdown-content {
-    display:block;
-    position: absolute;
     top: 14.5rem;
-    z-index: 9999;
     width: 15rem;
-    background-color: #f1f1f1;
     max-height: 9rem;
-    overflow: scroll;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
   }
   
   /* Links inside the dropdown */
   .dropdown-content li {
-    color: black;
     padding: 12px 16px;
-    text-decoration: none;
-    display: block;
   }
 
 }
